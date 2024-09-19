@@ -1,0 +1,33 @@
+  <nav>
+    <central-header
+      [sections]="sectionsAndUrls"
+      [toggleView]="toggleHeader"
+      (navigateTo)="scrollToSection($event)"
+    />
+  </nav>
+  
+  <main>
+    <general-information
+      (loaded)="setObs()"
+      [id]="IDS.GENERAL_ID"
+      class="section-size general-info-back"
+    />
+    <about [id]="IDS.ABOUT_ID" class="center-section"/>
+    <how-to [id]="IDS.COMPITE_ID" style="background-color: #f0f0f0"/>
+    <div [id]="IDS.CATEGORIES_ID" class="cat-n-stand center-section">
+      <categories
+        style="width: 100%; padding: 1vh 3vw"
+        (setCategory)="setNewCategory($event)"
+      />
+      <standards
+        style="width: 100%; height: 100vh"
+        [selectedCategory]="selectedCategory"
+      />
+    </div>
+    <find [id]="IDS.FIND_ID" style="background-color: #f0f0f0" />
+    <partner-sponsor [id]="IDS.ALLIES_ID"/>
+  </main>
+
+  <footer >
+    <app-footer/>
+  </footer>

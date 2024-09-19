@@ -1,0 +1,207 @@
+<div class="tittle">Categorías y Parámetros</div>
+
+<div class="stairs">
+  <div
+    class="beginner-text text"
+    (click)="selectCategory(0, 0)"
+    [ngClass]="{ 'text-active': selectedCategory === 0 }"
+  >
+    Principiante
+  </div>
+  <div
+    class="intermediate-text text"
+    (click)="selectCategory(1, 1)"
+    [ngClass]="{ 'text-active': selectedCategory === 1 }"
+  >
+    Intermedio
+  </div>
+  <div
+    class="junior-text text"
+    (click)="selectCategory(2, 1)"
+    [ngClass]="{ 'text-active': selectedCategory === 2 }"
+  >
+    Junior
+  </div>
+  <div
+    class="rx-text text"
+    (click)="selectCategory(3, 2)"
+    [ngClass]="{ 'text-active': selectedCategory === 3 }"
+  >
+    RX
+  </div>
+  <div
+    class="master-text text"
+    (click)="selectCategory(4, 2)"
+    [ngClass]="{ 'text-active': selectedCategory === 4 }"
+  >
+    Master
+  </div>
+  <div
+    class="elite-text text"
+    (click)="selectCategory(5, 3)"
+    [ngClass]="{ 'text-active': selectedCategory === 5 }"
+  >
+    Elite
+  </div>
+
+  <div class="beginner step"></div>
+  <div class="intermediate step"></div>
+  <div class="junior step"></div>
+  <div class="rx step"></div>
+  <div class="master step"></div>
+  <div class="elite step"></div>
+
+  <div class="last-row begginer-icons">
+    <div>
+      <img src="svg/boy.svg" alt="" />
+      <img src="svg/boy.svg" alt="" />
+      <span class="separator">|</span>
+      <img src="svg/girl.svg" alt="" />
+      <img src="svg/girl.svg" alt="" />
+    </div>
+    <span>HH | MM</span>
+  </div>
+  <div class="last-row intermediate-icons">
+    <div>
+      <img src="svg/boy.svg" alt="" />
+      <img src="svg/boy.svg" alt="" />
+
+      <span class="separator">|</span>
+
+      <img src="svg/girl.svg" alt="" />
+      <img src="svg/girl.svg" alt="" />
+    </div>
+
+    <span>HH | MM</span>
+  </div>
+  <div class="last-row junior-icons">
+    <div>
+      <img src="svg/boy.svg" alt="" />
+      <span class="separator">|</span>
+
+      <img src="svg/girl.svg" alt="" />
+    </div>
+
+    <span>H | M</span>
+  </div>
+  <div class="last-row rx-icons">
+    <div>
+      <img src="svg/boy.svg" alt="" />
+      <span class="separator">|</span>
+
+      <img src="svg/girl.svg" alt="" />
+    </div>
+
+    <span>H | M</span>
+  </div>
+  <div class="last-row master-icons">
+    <div>
+      <img src="svg/boy.svg" alt="" />
+      <span class="separator">|</span>
+
+      <img src="svg/girl.svg" alt="" />
+    </div>
+
+    <span>H | M</span>
+  </div>
+  <div class="last-row elite-icons">
+    <div>
+      <img src="svg/boy.svg" alt="" />
+      <span class="separator">|</span>
+
+      <img src="svg/girl.svg" alt="" />
+    </div>
+
+    <span>H | M</span>
+  </div>
+</div>
+
+<div class="pyramid">
+  <div
+    class="begginer-step pyramid-borders"
+    (click)="selectCategory(0, 0)"
+    [ngClass]="{ 'text-active': selectedCategory === 0 }"
+  >
+    <span> Principiante </span>
+
+    <div>
+      <img src="svg/boy.svg" alt="" />
+      <img src="svg/boy.svg" alt="" />
+      <span class="separator">|</span>
+      <img src="svg/girl.svg" alt="" />
+      <img src="svg/girl.svg" alt="" />
+    </div>
+  </div>
+
+  <div
+    class="intermediate-step pyramid-borders"
+    (click)="selectCategory(1, 1)"
+    [ngClass]="{ 'text-active': selectedCategory === 1 }"
+  >
+    <span> Intermedio </span>
+
+    <div>
+      <img src="svg/boy.svg" alt="" />
+      <img src="svg/boy.svg" alt="" />
+      <span class="separator">|</span>
+      <img src="svg/girl.svg" alt="" />
+      <img src="svg/girl.svg" alt="" />
+    </div>
+  </div>
+
+  <div
+    class="junior-step pyramid-borders extra-border"
+    (click)="selectCategory(2, 1)"
+    [ngClass]="{ 'text-active': selectedCategory === 2 }"
+  >
+    <span> Junior </span>
+
+    <div>
+      <img src="svg/boy.svg" alt="" />
+      <span class="separator">|</span>
+      <img src="svg/girl.svg" alt="" />
+    </div>
+  </div>
+
+  <div
+    class="rx-step pyramid-borders extra-border"
+    (click)="selectCategory(3, 2)"
+    [ngClass]="{ 'text-active': selectedCategory === 3 }"
+  >
+    <span> RX </span>
+
+    <div>
+      <img src="svg/boy.svg" alt="" />
+      <span class="separator">|</span>
+      <img src="svg/girl.svg" alt="" />
+    </div>
+  </div>
+
+  <div
+    class="master-step pyramid-borders extra-border"
+    (click)="selectCategory(4, 2)"
+    [ngClass]="{ 'text-active': selectedCategory === 4 }"
+  >
+    <span> Master </span>
+
+    <div>
+      <img src="svg/boy.svg" alt="" />
+      <span class="separator">|</span>
+      <img src="svg/girl.svg" alt="" />
+    </div>
+  </div>
+
+  <div
+    class="elite-step pyramid-borders extra-border"
+    (click)="selectCategory(5, 3)"
+    [ngClass]="{ 'text-active': selectedCategory === 5 }"
+  >
+    <span> elite </span>
+
+    <div>
+      <img src="svg/boy.svg" alt="" />
+      <span class="separator">|</span>
+      <img src="svg/girl.svg" alt="" />
+    </div>
+  </div>
+</div>

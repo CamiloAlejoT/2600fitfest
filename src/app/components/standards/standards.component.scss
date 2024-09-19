@@ -1,0 +1,53 @@
+.tittle {
+  font-family: "Hey August", sans-serif;
+  text-align: center;
+  font-size: 1.5vw;
+}
+
+.param{
+    font-size: 1vw;
+}
+
+.parms-table {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  place-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.cell {
+  width: -webkit-fill-available;
+  box-shadow: 3px 3px 8px 0px #5d5d5d;
+}
+
+@media ( width > 2000px) {
+    .tittle {
+      font-size: 1vw;
+    }
+}
+
+@media (width < 769px) {
+
+    .parms-table{
+        margin-top: 0;
+        padding: 0 3vw;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .tittle{
+        font-size: 3.5vw; 
+    }
+
+    .param{
+        font-size: 3vw;
+    }
+
+    .cell{
+        padding: 1vh 0;
+    }
+    
+}
+
+

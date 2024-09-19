@@ -1,1 +1,163 @@
+body {
+  font-family: Roboto, sans-serif;
+  //background-color: black;
+  margin: 0;
+}
+
+.tittle {
+  font-family: "Hey August", sans-serif;
+  font-size: 3vw;
+  text-align: center;
+}
+
+.limit-component {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.curson-pointer {
+  cursor: pointer;
+}
+
+.font {
+  &-gra {
+    font-family: "Hey August", sans-serif;
+  }
+  &-pink {
+    color: #e83d8d;
+  }
+
+  &-blue {
+    color: #41bad5;
+  }
+}
+
+.flex {
+  &-position {
+    &-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-left {
+      display: flex;
+      align-items: flex-start !important;
+    }
+
+    &-right {
+      display: flex;
+      align-items: flex-end !important;
+    }
+
+    &-even {
+      display: flex;
+      justify-content: space-evenly !important;
+    }
+
+    &-top {
+      display: flex;
+      justify-content: flex-start !important;
+    }
+
+    &-bottom {
+      display: flex;
+      justify-content: flex-end !important;
+    }
+  }
+
+  &-direction {
+    &-row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &-col {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &-gap {
+    &-10 {
+      gap: 10px;
+    }
+
+    &-20 {
+      gap: 20px;
+    }
+
+    &-30 {
+      gap: 30px;
+    }
+    &-40 {
+      gap: 10px;
+    }
+
+    &-50 {
+      gap: 50px;
+    }
+  }
+}
+
+@import url('https://fonts.cdnfonts.com/css/hey-august');
+
+// main {
+//     margin: 0;
+// }
+:root {
+  --mdc-dialog-container-color: rgba(0, 0, 0, 80%);
+}
+
 /* You can add global styles to this file, and also import other style files */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0.5rem;
+}
+
+.col-1 {
+  grid-column: span 1;
+}
+.col-2 {
+  grid-column: span 2;
+}
+.col-3 {
+  grid-column: span 3;
+}
+.col-4 {
+  grid-column: span 4;
+}
+.col-5 {
+  grid-column: span 5;
+}
+.col-6 {
+  grid-column: span 6;
+}
+.col-7 {
+  grid-column: span 7;
+}
+.col-8 {
+  grid-column: span 8;
+}
+.col-9 {
+  grid-column: span 9;
+}
+.col-10 {
+  grid-column: span 10;
+}
+.col-11 {
+  grid-column: span 11;
+}
+.col-12 {
+  grid-column: span 12;
+}
+
+.cdk-overlay-pane {
+  max-width: none !important;
+}
+
+@media (width < 769px) {
+  .tittle {
+    font-size: 6vw;
+  }
+}

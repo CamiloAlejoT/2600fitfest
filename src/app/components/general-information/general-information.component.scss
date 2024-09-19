@@ -1,0 +1,86 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+@mixin fadeIn($duration: 1s, $delay: 0s, $iterationCount: 1) {
+  animation-name: fadeIn;
+  animation-duration: $duration;
+  animation-delay: $delay;
+  animation-iteration-count: $iterationCount;
+  animation-fill-mode: both;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  @include fadeIn(0.8s);
+}
+
+.principal-text {
+  font-family: "Hey August", sans-serif;
+  color: rgba(255, 255, 255, 1);
+  font-size: 5rem;
+  transition: all 0.3s ease-in;
+  position: relative;
+  text-align: center;
+}
+
+.principal-text:first-child::before {
+  content: "";
+  bottom: -1.5rem;
+  left: 20%;
+  width: 60%;
+  background: white;
+  height: 1px;
+  position: absolute;
+}
+
+.principal-text:nth-child(2) {
+  font-size: 3rem;
+}
+
+.principal-text:hover {
+  color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+}
+
+.register-button {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  border: 1px solid;
+  border-color: white;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in;
+  background: rgba(255, 255, 255, 0);
+}
+
+.register-button:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: black;
+  color: black;
+}
+
+@media (width < 1024px) {
+
+  .principal-text {
+    font-size: 10vw;
+  }
+
+  .principal-text:nth-child(2) {
+    font-size: 8vw;
+  }
+
+}

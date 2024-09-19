@@ -1,0 +1,83 @@
+@if (display) {
+<nav class="navbar visible" [ngClass]="{ visible: toggleView }">
+  <div class="nav-items">
+    <img src="svg/2600-logo-white.svg" alt="" class="impala-logo" />
+    @for (nav of sections; track $index) {
+    <div
+      class="nav-item"
+      [ngClass]="{ 'selected-nav-item': selectedItem === $index }"
+      [id]="nav.url"
+      (click)="handelNavigate($index, nav.id)"
+    >
+      {{ nav.label }}
+    </div>
+    }
+  </div>
+  <div class="rrss-container">
+    <img class="rrss" src="svg/rrss-ig.svg" alt="" (click)="openRRSS('ig')" />
+    <img class="rrss" src="svg/rrss-wp.svg" alt="" (click)="openRRSS('wp')" />
+  </div>
+</nav>
+} @else {
+
+<nav class="navbar visible" [ngClass]="{ visible: toggleView }">
+  <header class="header-content">
+    <div
+      class="menu-button transition"
+      (click)="isLateralMenuExpanded = !isLateralMenuExpanded"
+      [ngClass]="{ 'hide': isLateralMenuExpanded }"
+    >
+      <svg
+        width="50px"
+        height="50px"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="svg-stroke"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0" />
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <g id="SVGRepo_iconCarrier">
+          <path
+            d="M4 6H20M4 12H20M4 18H20"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+      </svg>
+    </div>
+    <img src="svg/2600-logo-white.svg" alt="" class="impala-logo" />
+  </header>
+</nav>
+
+<section
+  class="lateral-menu"
+  [ngClass]="{ 'lateral-menu-expanded': isLateralMenuExpanded }"
+>
+  <div class="menu-content">
+    <div
+      (click)="isLateralMenuExpanded = !isLateralMenuExpanded"
+      class="close-icon transition"
+      [ngClass]="{ 'hide': isLateralMenuExpanded }"
+    >
+      <img src="svg/close.svg" alt="" />
+    </div>
+    @for (nav of sections; track $index) {
+    <span
+      class="nav-item"
+      [ngClass]="{ 'selected-nav-item': selectedItem === $index }"
+      [id]="nav.url"
+      (click)="handelNavigate($index, nav.id)"
+    >
+      {{ nav.label }}
+    </span>
+    }
+  </div>
+  
+</section>
+}

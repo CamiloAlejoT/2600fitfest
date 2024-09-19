@@ -28,8 +28,9 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
-              }
+                "input": "public/assets"
+              },
+              "src/_routes.json"
             ],
             "styles": [
               "src/styles.scss"

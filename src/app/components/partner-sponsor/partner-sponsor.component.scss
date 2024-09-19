@@ -1,0 +1,35 @@
+.grid-container {
+    margin: 3vh auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    img {
+        max-width: 100%
+    }
+
+    .flex-position-center:nth-child(3) {
+        img{
+            max-height: 15vw;
+        }
+    } 
+}
+
+.img-back {
+    height: 50%;
+    overflow: hidden;
+    
+    .img-content {
+        width: 100%;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+@media (width < 768px ) {
+    .flex-position-center:nth-child(3) {
+        img{
+            max-height: unset !important;
+            height: 50vw;
+        }
+    } 
+}

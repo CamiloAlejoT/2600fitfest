@@ -1,0 +1,13 @@
+<div class="tittle">¿Cómo competir?</div>
+
+<div class="grid-container limit-component flex-gap20">
+  
+@for (item of howToCompite; track $index) {
+    <div class="flex-direction-col flex-gap-20 card-container flex-position-center flex-position-top">
+        <img [src]="'svg/'+item.svg+'.svg'" alt="">
+        <strong>{{item.tittle}}</strong>
+        <span>{{item.description}}</span>
+    </div>
+}
+
+</div>

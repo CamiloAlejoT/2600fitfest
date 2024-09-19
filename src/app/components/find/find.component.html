@@ -1,0 +1,15 @@
+<div class="limit-component">
+  <div class="tittle">
+    En
+    <span class="font-pink">2600</span>
+    <span class="font-blue"> FIT FEST </span>encontrarás
+  </div>
+  <section class="flex-direction-row flex-position-center flex-gap-50">
+    @for (card of cardContent; track $index) {
+    <div class="custom-card flex-direction-col">
+      <span class="card-tittle"> {{ card.tittle }}</span>
+      <span class="card-text"> {{ card.text }}</span>
+    </div>
+    }
+  </section>
+</div>
