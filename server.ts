@@ -10,7 +10,6 @@ interface Env {
 // See tools/bundle.mjs
 async function workerFetchHandler(request: Request, env: Env) {
 	const url = new URL(request.url);
-	console.log("render SSR", url.href);
 
 	// Get the root `index.html` content.
 	const indexUrl = new URL("/home", url);

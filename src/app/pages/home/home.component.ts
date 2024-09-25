@@ -18,6 +18,7 @@ import { FooterComponent } from '@/app/components/footer/footer.component';
 import { FindComponent } from '@/app/components/find/find.component';
 import { HowToComponent } from '@/app/components/how-to/how-to.component';
 import { PartnerSponsorComponent } from '@/app/components/partner-sponsor/partner-sponsor.component';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -53,9 +54,26 @@ export class HomeComponent implements OnInit {
   selectedCategory: number = 0;
   toggleHeader: boolean = true;
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(private titleService: Title, private metaService: Meta) {
+    this.titleService.setTitle('2600 Fit Fest');
 
-  ngOnInit(): void { }
+    this.metaService.addTags([
+      {
+        name: 'description',
+        content: '2600 Fit Fest - A great event for fitness enthusiasts.',
+      },
+      { name: 'keywords', content: 'fitness, event, competition' },
+      { name: 'robots', content: 'index, follow' },
+      { property: 'og:title', content: '2600 Fit Fest' }, // OpenGraph meta tag for social media
+      {
+        property: 'og:description',
+        content: 'Join the 2600 Fit Fest for an amazing fitness experience.',
+      },
+      // { property: 'og:image', content: 'https://example.com/image.jpg' }, // OpenGraph image
+    ]);
+  }
+
+  ngOnInit(): void {}
 
   ngAfterViewInit(): void {}
 
@@ -82,7 +100,7 @@ export class HomeComponent implements OnInit {
 
   scrollToSection(id: string) {
     const elem = document.getElementById(id);
-    elem?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    elem?.scrollIntoView({ behavior: 'smooth', block: 'end' });
   }
 
   setNewCategory(selectedCategory: number) {

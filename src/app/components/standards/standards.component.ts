@@ -67,6 +67,11 @@ export class StandardsComponent {
       description: ['No', 'No', 'Sí', 'Sí']
     }
   ] 
+
+
+  openIG( ){
+    window.open('https://www.instagram.com/p/C6gfo3or7x9/?igsh=YTY2bzA1b2xzaWFp', '_blank')
+  }
    
   
 
