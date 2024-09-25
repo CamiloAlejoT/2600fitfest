@@ -55,9 +55,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private router: Router) {}
 
-  ngOnInit(): void {
-    console.log(this.route.snapshot.paramMap.get('section'));
-  }
+  ngOnInit(): void { }
 
   ngAfterViewInit(): void {}
 

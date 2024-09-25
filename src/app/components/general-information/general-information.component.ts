@@ -15,4 +15,9 @@ ngAfterContentInit(): void {
   this.loaded.emit(true)
 }
 
+openPuki(){
+  const url: string = "https://events.pukiebook.com/event/769/register"
+  window.open(url, '_blank')
+}
+
 }

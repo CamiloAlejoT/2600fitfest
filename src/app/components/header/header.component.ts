@@ -30,7 +30,7 @@ export class HeaderComponent {
     const url: string =
       rs === 'ig'
         ? 'https://www.instagram.com/2600fitfest/'
-        : 'https://api.whatsapp.com/send?phone=573203993082&text=hola';
+        : 'https://api.whatsapp.com/send?phone=573214919067&text=hola';
     window.open(url, '_blank');
   }
 
